@@ -1,7 +1,5 @@
 #include "registers.hpp"
 
-unsigned int Registers::data[32];
-
 std::map<std::string, unsigned int> Registers::names
 {
     {"$zero", 0},
@@ -38,15 +36,15 @@ std::map<std::string, unsigned int> Registers::names
     {"$ra", 31},
 };
 
-unsigned int Registers::get(std::string name)
+unsigned int Registers::get(unsigned int number)
 {
-    return data[names[name]];
+    return data[number];
 }
 
-void Registers::set(std::string name, unsigned int value)
+void Registers::set(unsigned int number, unsigned int value)
 {
-    if(name != "$zero")
-        data[names[name]] = value;
+    if(number != 0)
+        data[0] = value;
 }
 
 unsigned int Registers::Number(std::string name)
