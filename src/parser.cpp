@@ -8,6 +8,8 @@
 #include <iterator>
 #include <map>
 
+#include "registers.hpp"
+
 std::string Parser::pseudoInstructions[]
 {
     "blt",
@@ -38,6 +40,9 @@ std::vector<Lexeme> Parser::lex(std::string filename)
             //remove excess characters
             line.erase(std::remove(line.begin(), line.end(), ','), line.end());
             line.erase(std::remove(line.begin(), line.end(), '\t'), line.end());
+            line.erase(std::remove(line.begin(), line.end(), ')'), line.end());
+            std::replace(line.begin(), line.end(), '(', ' ');
+
 
             //split
             std::vector<std::string> tokens;
@@ -158,9 +163,15 @@ std::vector<Instruction *>Parser::parse(std::string filename)
     //memory operands $t0 offset(base register)
     //use shamt for shift functions only
 
-    std::map<std::string, int> labelPositions;
+    std::map<std::string, unsigned int> labelPositions;
 
-    int commandCount = 0;
+    for(unsigned int i = 0; i < lexemes.size(); i++)
+    {
+        if(lexemes[i].type == COMMAND && (lexemes[i].token == "beq" || lexemes[i].token == "bne" || lexemes[i].token == "j" || lexemes[i].token == "jal" || lexemes[i].token == "jr"))
+            lexemes.insert(lexemes.begin() + i + 1, {"nop", COMMAND});
+    }
+
+    unsigned int commandCount = 0;
 
     for(unsigned int i = 0; i < lexemes.size(); i++)
     {
@@ -173,17 +184,60 @@ std::vector<Instruction *>Parser::parse(std::string filename)
         }
     }
 
+    commandCount = 0;
+
     for(unsigned int i = 0; i < lexemes.size(); i++)
     {
         if(lexemes[i].type == COMMAND)
         {
             Instruction *instruction = Instructions::create(lexemes[i].token);
+
+            if(instruction->bits() == 0);
+            else if(instruction->format() == R)
+            {
+                ((InstructionR *)instruction)->set_rd(Registers::Number(lexemes[i + 1].token));
+                ((InstructionR *)instruction)->set_rt(Registers::Number(lexemes[i + 2].token));
+                if(lexemes[i].token == "sll" || lexemes[i].token == "srl" || lexemes[i].token == "sra")
+                    ((InstructionR *)instruction)->set_shamt(std::stoi(lexemes[i + 3].token));
+                else
+                    ((InstructionR *)instruction)->set_rs(Registers::Number(lexemes[i + 3].token));
+            }
+            else if(instruction->format() == I)
+            {
+                ((InstructionI *)instruction)->set_rt(Registers::Number(lexemes[i + 1].token));
+                if(lexemes[i].token == "lbu" || lexemes[i].token == "lhu" || lexemes[i].token == "lw" || lexemes[i].token == "sb" || lexemes[i].token == "sh" || lexemes[i].token == "sw")
+                {
+                    ((InstructionI *)instruction)->set_immediate(std::stoi(lexemes[i + 2].token));
+                    ((InstructionI *)instruction)->set_rs(Registers::Number(lexemes[i + 3].token));
+                }
+                else
+                {
+                    ((InstructionI *)instruction)->set_rs(Registers::Number(lexemes[i + 2].token));
+                    if(lexemes[i].token == "beq" || lexemes[i].token == "bne")
+                    {
+                        ((InstructionI *)instruction)->set_immediate(4 * (labelPositions[lexemes[i + 3].token] - commandCount));
+                    }
+                    else
+                        ((InstructionI *)instruction)->set_immediate(std::stoi(lexemes[i + 3].token));
+                }
+            }
+            else if(instruction->format() == J)
+            {
+                ((InstructionJ *)instruction)->set_address(4 * labelPositions[lexemes[i + 1].token] + 0x00400000);
+            }
+
             instructions.push_back(instruction);
+
+            commandCount++;
         }
     }
 
+    //TODO: handle 0($yeet) 
+
     for(unsigned int i = 0; i < instructions.size(); i++)
     {
+        //td::vector<std::string> arguments;
+
         Output::DebugLine(instructions[i]->bits());
     }
 
