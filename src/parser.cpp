@@ -239,6 +239,7 @@ std::vector<Instruction *>Parser::parse(std::string filename)
         //td::vector<std::string> arguments;
 
         Output::DebugLine(instructions[i]->bits());
+        Output::DebugLine(Instructions::decode(instructions[i]->bits())->bits());
     }
 
     return instructions;

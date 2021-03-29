@@ -1,3 +1,5 @@
+#pragma once
+
 #include "instruction.hpp"
 
 #include <map>
@@ -18,6 +20,7 @@ private:
 static std::map<std::string, InstructionPrototype> instructions;
 
 public:
+static Instruction *decode(unsigned int bits);
 
 static Instruction *create(std::string mnemonic);
 };

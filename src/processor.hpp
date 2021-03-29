@@ -1,11 +1,15 @@
 #pragma once
 
+#include "memory.hpp"
+#include "registers.hpp"
+#include "instructions.hpp"
+
 enum State {
     FETCH,
     DECODE,
     EXECUTE,
-    WRITE_BACK,
     MEMORY_ACCESS,
+    WRITE_BACK,
 };
 
 enum ReturnCode {
@@ -17,6 +21,21 @@ class Processor {
 private:
 
 State currentState;
+unsigned int programCounter;
+Memory memory;
+Registers registers;
+
+unsigned int instructionRegister;
+
+unsigned int rsValue;
+unsigned int rtValue;
+unsigned int rdValue;
+
+void Fetch();
+void Decode();
+void Execute();
+void Write_Back();
+void Memory_Access();
 
 public:
 
