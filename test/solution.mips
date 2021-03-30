@@ -1,0 +1,14 @@
+#difference of two squares
+#(n+1)^2 - n^2 = (n + 1 + n)(n + 1 - n)
+#(n+1)^2 = n^2 + 2n + 1
+    li $t0, 0 #square number
+    li $t1, 1 #what is being added
+    lui $t2, 4096 #array start
+    li $t3, 198 #max difference
+loop:
+    addu $t0, $t0, $t1
+    addiu $t1, $t1, 2
+    sw $t0, 32768($t2)
+    addiu $t2, $t2, 4
+    bgt $t1, $t3, loop
+    syscall

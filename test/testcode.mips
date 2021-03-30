@@ -1,6 +1,7 @@
     li $t1, 12
 loop:
-    addi $t0, $t0, 1
+    addiu $t0, $t0, 1
     bgt $t0, $t1, loop
     #comment
     lw $t0 12($t1)
+    syscall

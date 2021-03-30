@@ -18,6 +18,9 @@ std::string Parser::pseudoInstructions[]
     "bge",
     "li",
     "move",
+    //not pseudo commands
+    "syscall",
+    "lui",
 };
 
 std::vector<Lexeme> Parser::lex(std::string filename)
@@ -148,6 +151,18 @@ void Parser::handlePseudo(std::vector<Lexeme> &lexemes)
                 lexemes.insert(lexemes.begin() + i + 2, {"$zero", ARGUMENT});
                 lexemes.insert(lexemes.begin() + i + 3, args[1]);
             }
+            else if(lexemes[i].token == "syscall") //not pseudo but needs filler
+            {
+                lexemes.insert(lexemes.begin() + i + 1, {"$zero", ARGUMENT});
+                lexemes.insert(lexemes.begin() + i + 2, {"$zero", ARGUMENT});
+                lexemes.insert(lexemes.begin() + i + 3, {"$zero", ARGUMENT});
+            }
+            else if(lexemes[i].token == "lui") //not pseudo but needs filler
+            {
+                lexemes.insert(lexemes.begin() + i + 1, args[0]);
+                lexemes.insert(lexemes.begin() + i + 2, args[0]);
+                lexemes.insert(lexemes.begin() + i + 3, args[1]);
+            }
         }
     }
 }
@@ -167,14 +182,19 @@ std::vector<Instruction *>Parser::parse(std::string filename)
 
     for(unsigned int i = 0; i < lexemes.size(); i++)
     {
-        if(lexemes[i].type == COMMAND && (lexemes[i].token == "beq" || lexemes[i].token == "bne" || lexemes[i].token == "j" || lexemes[i].token == "jal" || lexemes[i].token == "jr"))
-            lexemes.insert(lexemes.begin() + i + 1, {"nop", COMMAND});
+        if(lexemes[i].type == COMMAND && (lexemes[i].token == "beq" || lexemes[i].token == "bne"))
+            lexemes.insert(lexemes.begin() + i + 4, {"nop", COMMAND});
+        if(lexemes[i].type == COMMAND && (lexemes[i].token == "j" || lexemes[i].token == "jal" || lexemes[i].token == "jr"))
+            lexemes.insert(lexemes.begin() + i + 3, {"nop", COMMAND});
     }
 
     unsigned int commandCount = 0;
 
     for(unsigned int i = 0; i < lexemes.size(); i++)
     {
+        Output::Debug("token: ");
+        Output::DebugLine(lexemes[i].token);
+
         if(lexemes[i].type == COMMAND)
             commandCount++;
 
@@ -215,7 +235,8 @@ std::vector<Instruction *>Parser::parse(std::string filename)
                     ((InstructionI *)instruction)->set_rs(Registers::Number(lexemes[i + 2].token));
                     if(lexemes[i].token == "beq" || lexemes[i].token == "bne")
                     {
-                        ((InstructionI *)instruction)->set_immediate(4 * (labelPositions[lexemes[i + 3].token] - commandCount));
+                        Output::DebugLine(labelPositions[lexemes[i + 3].token] - commandCount);
+                        ((InstructionI *)instruction)->set_immediate(labelPositions[lexemes[i + 3].token] - commandCount - 1);
                     }
                     else
                         ((InstructionI *)instruction)->set_immediate(std::stoi(lexemes[i + 3].token));
@@ -223,23 +244,13 @@ std::vector<Instruction *>Parser::parse(std::string filename)
             }
             else if(instruction->format() == J)
             {
-                ((InstructionJ *)instruction)->set_address(4 * labelPositions[lexemes[i + 1].token] + 0x00400000);
+                ((InstructionJ *)instruction)->set_address(labelPositions[lexemes[i + 1].token] + 0x00400000);
             }
 
             instructions.push_back(instruction);
 
             commandCount++;
         }
-    }
-
-    //TODO: handle 0($yeet) 
-
-    for(unsigned int i = 0; i < instructions.size(); i++)
-    {
-        //td::vector<std::string> arguments;
-
-        Output::DebugLine(instructions[i]->bits());
-        Output::DebugLine(Instructions::decode(instructions[i]->bits())->bits());
     }
 
     return instructions;

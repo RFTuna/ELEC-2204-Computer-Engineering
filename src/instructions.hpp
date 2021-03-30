@@ -22,5 +22,7 @@ static std::map<std::string, InstructionPrototype> instructions;
 public:
 static Instruction *decode(unsigned int bits);
 
+static std::string mnemonic(unsigned int bits);
+
 static Instruction *create(std::string mnemonic);
 };

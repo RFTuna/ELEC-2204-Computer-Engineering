@@ -1,5 +1,7 @@
 #include "registers.hpp"
 
+#include "output.hpp"
+
 std::map<std::string, unsigned int> Registers::names
 {
     {"$zero", 0},
@@ -38,13 +40,19 @@ std::map<std::string, unsigned int> Registers::names
 
 unsigned int Registers::get(unsigned int number)
 {
+    Output::Debug("loaded value: ");
+    Output::DebugLine(data[number]);
     return data[number];
 }
 
 void Registers::set(unsigned int number, unsigned int value)
 {
     if(number != 0)
-        data[0] = value;
+    {
+        data[number] = value;
+        Output::Debug("saved value: ");
+        Output::DebugLine(value);
+    }
 }
 
 unsigned int Registers::Number(std::string name)

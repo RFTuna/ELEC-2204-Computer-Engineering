@@ -21,10 +21,11 @@ int main(int argc, char* argv[])
 
  
     std::vector<Instruction *> code = Parser::parse(filename);
-    
+
+    processor.program(code);
 
     ReturnCode returnCode;
-
+    
     do {
         returnCode = processor.cycle();
     }

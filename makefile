@@ -25,7 +25,7 @@ run: all
 	bin\main
 
 debug: all
-	bin\main debug -f test/testcode.mips
+	bin\main debug -f test/solution.mips
 
 clean:
 	@-del /Q $(BIN_DIR) $(OBJ_DIR)

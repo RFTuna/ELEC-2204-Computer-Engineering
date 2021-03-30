@@ -4,51 +4,53 @@
 
 std::map<std::string, InstructionPrototype> Instructions::instructions
 {
-    {"add", {R, {0, 0x20}}},
-    {"addi", {I, {0x8}}},
-    {"addiu", {I, {0x9}}},
-    {"addu", {R, {0, 0x21}}},
+    //{"add", {R, {0, 0x20}}},
+    //{"addi", {I, {0x8}}},
+    {"addiu", {I, {0x9}}}, //
+    {"addu", {R, {0, 0x21}}}, //
 
-    {"and", {R, {0, 0x24}}},
-    {"andi", {I, {0xc}}},
+    {"and", {R, {0, 0x24}}}, //
+    {"andi", {I, {0xc}}}, //
 
-    {"beq", {I, {0x4}}},
-    {"bne", {I, {0x5}}},
+    {"beq", {I, {0x4}}}, //
+    {"bne", {I, {0x5}}}, //
 
-    {"j", {J, {0x2}}},
-    {"jal", {J, {0x3}}},
-    {"jr", {R, {0, 0x8}}},
+    {"j", {J, {0x2}}}, //
+    {"jal", {J, {0x3}}}, //
+    {"jr", {R, {0, 0x8}}}, //
 
-    {"lbu", {I, {0x24}}},
-    {"lhu", {I, {0x25}}},
-    {"lui", {I, {0xf}}},
-    {"lw", {I, {0x23}}},
+    {"lbu", {I, {0x24}}}, //
+    {"lhu", {I, {0x25}}}, //
+    {"lui", {I, {0xf}}}, //
+    {"lw", {I, {0x23}}}, //
 
-    {"nor", {R, {0, 0x27}}},
-    {"or", {R, {0, 0x25}}},
-    {"ori", {I, {0xd}}},
+    {"nor", {R, {0, 0x27}}}, //
+    {"or", {R, {0, 0x25}}}, //
+    {"ori", {I, {0xd}}}, //
 
-    {"slt", {R, {0, 0x2a}}},
-    {"stli", {I, {0xa}}},
-    {"sltiu", {I, {0xb}}},
-    {"sltu", {R, {0, 0x2b}}},
+    {"slt", {R, {0, 0x2a}}}, //
+    {"stli", {I, {0xa}}}, //
+    {"sltiu", {I, {0xb}}}, //
+    {"sltu", {R, {0, 0x2b}}}, //
 
-    {"sll", {R, {0, 0x00}}},
-    {"srl", {R, {0, 0x02}}},
+    {"sll", {R, {0, 0x00}}}, //
+    {"srl", {R, {0, 0x02}}}, //
 
-    {"sb", {I, {0x28}}},
-    {"sh", {I, {0x29}}},
-    {"sw", {I, {0x2b}}},
+    {"sb", {I, {0x28}}}, //
+    {"sh", {I, {0x29}}}, //
+    {"sw", {I, {0x2b}}}, //
 
-    {"sub", {R, {0, 0x22}}},
-    {"subu", {R, {0, 0x23}}}, 
+    //{"sub", {R, {0, 0x22}}},
+    {"subu", {R, {0, 0x23}}}, //
 
     //{"mfc0", {R, {0x10, 0x0}}}, sed for exceptions
 
-    {"sra", {R, {0, 0x3}}},
+    {"sra", {R, {0, 0x3}}}, //
+
+    {"syscall", {R, {0, 0xc}}},
 };
 
-Instruction *Instructions::decode(unsigned int bits)
+std::string Instructions::mnemonic(unsigned int bits)
 {
     unsigned int opcode = bits >> 26;
 
@@ -73,7 +75,12 @@ Instruction *Instructions::decode(unsigned int bits)
         }
     }
 
-    Instruction *instruction = create(mnemonic);
+    return mnemonic;
+}
+
+Instruction *Instructions::decode(unsigned int bits)
+{
+    Instruction *instruction = create(mnemonic(bits));
 
     if(instruction->format() == R)
     {

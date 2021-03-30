@@ -1,5 +1,17 @@
 #include "instruction.hpp"
 
+#include "instructions.hpp"
+
+unsigned int Instruction::get_opcode()
+{
+    return m_opcode;
+}
+
+std::string Instruction::mnemonic()
+{
+    return Instructions::mnemonic(bits());
+}
+
 InstructionR::InstructionR(unsigned int opcode, unsigned int funct)
 {
     m_opcode = opcode;
@@ -48,6 +60,11 @@ unsigned int InstructionR::get_rd()
 unsigned int InstructionR::get_shamt()
 {
     return m_shamt;
+}
+
+unsigned int InstructionR::get_funct()
+{
+    return m_funct;
 }
 
 InstructionFormat InstructionR::format()

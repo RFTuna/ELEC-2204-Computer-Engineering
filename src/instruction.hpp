@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 enum InstructionFormat
 {
     R,
@@ -16,6 +18,10 @@ public:
     virtual InstructionFormat format() = 0;
 
     virtual unsigned int bits() = 0;
+
+    unsigned int get_opcode();
+
+    std::string mnemonic();
 };
 
 class InstructionR : Instruction {
@@ -39,6 +45,7 @@ public:
     unsigned int get_rt();
     unsigned int get_rd();
     unsigned int get_shamt();
+    unsigned int get_funct();
 
     InstructionFormat format() override;
 
