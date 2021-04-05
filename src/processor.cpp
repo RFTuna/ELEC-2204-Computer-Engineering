@@ -72,6 +72,8 @@ void Processor::Decode()
     Output::Debug("instruction: ");
     Output::DebugLine(instructionMnemonic);
 
+    Output::DebugLine(instruction->outputString());
+
     if(instruction->format() == R)
     {
         rsValue = registers.get(((InstructionR *)instruction)->get_rs());

@@ -2,6 +2,8 @@
 
 #include "instructions.hpp"
 
+#include <string>
+
 unsigned int Instruction::get_opcode()
 {
     return m_opcode;
@@ -77,6 +79,21 @@ unsigned int InstructionR::bits()
     return (m_opcode << 26) + (m_rs << 21) + (m_rt << 16) + (m_rd << 11)  + (m_shamt << 6) + m_funct;
 }
 
+std::string InstructionR::outputString()
+{
+    if(mnemonic() == "nop")
+        return "nop";
+
+    return mnemonic()
+    .append(" | opcode: ").append(std::to_string(m_opcode))
+    .append(" | rs: ").append(std::to_string(m_rs))
+    .append(" | rt: ").append(std::to_string(m_rt))
+    .append(" | rd: ").append(std::to_string(m_rd))
+    .append(" | shamt: ").append(std::to_string(m_shamt))
+    .append(" | funct: ").append(std::to_string(m_funct))
+    .append(" |");
+}
+
 InstructionI::InstructionI(unsigned int opcode)
 {
     m_opcode = opcode;
@@ -126,6 +143,16 @@ unsigned int InstructionI::bits()
     return (m_opcode << 26) + (m_rs << 21) + (m_rt << 16) + m_immediate;
 }
 
+std::string InstructionI::outputString()
+{
+    return mnemonic()
+    .append(" | opcode: ").append(std::to_string(m_opcode))
+    .append(" | rs: ").append(std::to_string(m_rs))
+    .append(" | rt: ").append(std::to_string(m_rt))
+    .append(" | immediate: ").append(std::to_string(m_immediate))
+    .append(" |");
+}
+
 InstructionJ::InstructionJ(unsigned int opcode)
 {
     m_opcode = opcode;
@@ -150,4 +177,12 @@ InstructionFormat InstructionJ::format()
 unsigned int InstructionJ::bits()
 {
     return (m_opcode << 26) + m_address;
+}
+
+std::string InstructionJ::outputString()
+{
+    return mnemonic()
+    .append(" | opcode: ").append(std::to_string(m_opcode))
+    .append(" | address: ").append(std::to_string(m_address))
+    .append(" |");
 }

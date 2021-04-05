@@ -21,6 +21,8 @@ public:
 
     unsigned int get_opcode();
 
+    virtual std::string outputString() = 0;
+
     std::string mnemonic();
 };
 
@@ -50,6 +52,8 @@ public:
     InstructionFormat format() override;
 
     unsigned int bits() override;
+
+    std::string outputString() override;
 };
 
 class InstructionI : Instruction {
@@ -73,6 +77,8 @@ public:
     InstructionFormat format() override;
 
     unsigned int bits() override;
+
+    std::string outputString() override;
 };
 
 class InstructionJ : Instruction {
@@ -90,4 +96,6 @@ public:
     InstructionFormat format() override;
 
     unsigned int bits() override;
+
+    std::string outputString() override;
 };
