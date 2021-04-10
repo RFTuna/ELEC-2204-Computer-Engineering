@@ -43,19 +43,15 @@ ReturnCode Processor::cycle() {
 
 void Processor::Fetch()
 {
-    Output::DebugLine("");
-    Output::DebugLine("");
-    Output::DebugLine("");
-    Output::DebugLine("");
-    Output::DebugLine("");
-    Output::DebugLine("");
-    Output::DebugLine("||||||||||||||||||||||||||||||||||||||");
-    Output::DebugLine("FETCH");
-
-    Output::Debug("pc: ");
-    Output::DebugLine(programCounter);
+    Output::Debug("n: ");
+    Output::Debug(instructionCount);
+    Output::Debug(" | pc: ");
+    Output::Debug(programCounter);
+    Output::Debug(" | ");
 
     instructionRegister = memory.getWord(programCounter);
+
+    instructionCount++;
 }
 
 void Processor::Decode()
@@ -66,13 +62,7 @@ void Processor::Decode()
 
     instructionMnemonic = instruction->mnemonic();
 
-    Output::DebugLine("");
-    Output::DebugLine("DECODE");
-
-    Output::Debug("instruction: ");
-    Output::DebugLine(instructionMnemonic);
-
-    Output::DebugLine(instruction->outputString());
+    Output::Debug(instruction->outputString());
 
     if(instruction->format() == R)
     {
@@ -83,24 +73,6 @@ void Processor::Decode()
 
         target = ((InstructionR *)instruction)->get_rd();
 
-        Output::Debug("rs: ");
-        Output::DebugLine(((InstructionR *)instruction)->get_rs());
-
-        Output::Debug("rt: ");
-        Output::DebugLine(((InstructionR *)instruction)->get_rt());
-
-        Output::Debug("rs value: ");
-        Output::DebugLine(rsValue);
-
-        Output::Debug("rt value: ");
-        Output::DebugLine(rtValue);
-
-        Output::Debug("shamt: ");
-        Output::DebugLine(shamt);
-
-        Output::Debug("target: ");
-        Output::DebugLine(target);
-
     }
     else if(instruction->format() == I)
     {
@@ -109,38 +81,20 @@ void Processor::Decode()
         immediate = ((InstructionI *)instruction)->get_immediate();
 
         target = ((InstructionI *)instruction)->get_rt();
-
-        Output::Debug("rs: ");
-        Output::DebugLine(((InstructionI *)instruction)->get_rs());
-
-        Output::Debug("rs value: ");
-        Output::DebugLine(rsValue);
-
-        Output::Debug("immediate: ");
-        Output::DebugLine(immediate);
-
-        Output::Debug("target: ");
-        Output::DebugLine(target);
     }
     else if(instruction->format() == J)
     {
         address = ((InstructionJ *)instruction)->get_address();
-
-        Output::Debug("address: ");
-        Output::DebugLine(address);
     }
 }
 
 void Processor::Execute()
 {
-    Output::DebugLine("");
-    Output::DebugLine("EXECUTE");
-
     if(instructionMnemonic == "addu")
         result = rsValue + rtValue;
-    if(instructionMnemonic == "addiu")
+    else if(instructionMnemonic == "addiu")
         result = rsValue + signExtImm();
-    if(instructionMnemonic == "subu")
+    else if(instructionMnemonic == "subu")
         result = rsValue - rtValue;
     else if(instructionMnemonic == "and")
         result = rsValue & rtValue;
@@ -185,28 +139,22 @@ void Processor::Execute()
 
 void Processor::Memory_Access()
 {
-    Output::DebugLine("");
-    Output::DebugLine("MEMORY ACCESS");
-
     if(instructionMnemonic == "lbu")
         result = memory.getByte(rsValue + signExtImm());
-    if(instructionMnemonic == "lhu")
+    else if(instructionMnemonic == "lhu")
         result = memory.getHalfword(rsValue + signExtImm());
-    if(instructionMnemonic == "lw")
+    else if(instructionMnemonic == "lw")
         result = memory.getWord(rsValue + signExtImm());
-    if(instructionMnemonic == "sb")
+    else if(instructionMnemonic == "sb")
         memory.setByte(rsValue + signExtImm(), rtValue & 0x000000FF);
-    if(instructionMnemonic == "sh")
+    else if(instructionMnemonic == "sh")
         memory.setHalfword(rsValue + signExtImm(), rtValue & 0x0000FFFF);
-    if(instructionMnemonic == "sw")
+    else if(instructionMnemonic == "sw")
         memory.setWord(rsValue + signExtImm(), rtValue);
 }
 
 void Processor::Write_Back()
 {
-    Output::DebugLine("");
-    Output::DebugLine("WRITE BACK");
-
     if(instructionMnemonic != "sb"
     && instructionMnemonic != "sh"
     && instructionMnemonic != "sw"
@@ -216,8 +164,8 @@ void Processor::Write_Back()
     && instructionMnemonic != "bne"
     && instructionMnemonic != "syscall")
     {
-        Output::Debug("result: ");
-        Output::DebugLine(result);
+        Output::Debug(" | result: ");
+        Output::Debug(result);
 
         if(instructionMnemonic == "jal")
         {
@@ -231,6 +179,8 @@ void Processor::Write_Back()
 
     if(instructionMnemonic == "syscall")
         exit = true;
+
+    Output::DebugLine("");
 }
 
 unsigned int Processor::signExtImm()

@@ -192,9 +192,6 @@ std::vector<Instruction *>Parser::parse(std::string filename)
 
     for(unsigned int i = 0; i < lexemes.size(); i++)
     {
-        Output::Debug("token: ");
-        Output::DebugLine(lexemes[i].token);
-
         if(lexemes[i].type == COMMAND)
             commandCount++;
 
@@ -235,7 +232,6 @@ std::vector<Instruction *>Parser::parse(std::string filename)
                     ((InstructionI *)instruction)->set_rs(Registers::Number(lexemes[i + 2].token));
                     if(lexemes[i].token == "beq" || lexemes[i].token == "bne")
                     {
-                        Output::DebugLine(labelPositions[lexemes[i + 3].token] - commandCount);
                         ((InstructionI *)instruction)->set_immediate(labelPositions[lexemes[i + 3].token] - commandCount - 1);
                     }
                     else

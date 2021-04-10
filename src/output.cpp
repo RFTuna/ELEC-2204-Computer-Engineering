@@ -4,41 +4,19 @@ bool Output::newLine = true;
 
 OutputMode Output::mode = RELEASE;
 
-/*
-void Output::Print(const char *message)
-{
-    if(newLine)
-        std::cout << std::setfill(' ') << std::setw(20) << std::left << "[RELEASE]";
-    std::cout << message;
-    newLine = false;
-}
+std::ofstream Output::log;
 
-void Output::PrintLine(const char *message)
-{
-    if(newLine)
-        std::cout << std::setfill(' ') << std::setw(20) << std::left << "[RELEASE]";
-    std::cout << message << std::endl;
-    newLine = true;
-}
+std::string Output::logFile;
 
-void Output::Debug(const char *message)
+bool Output::shouldLog = false;
+
+void Output::SetLogFile(std::string file)
 {
-    if(mode != RELEASE)
+    logFile = file;
+    log.open(file, std::ofstream::out | std::ofstream::trunc);
+
+    if(log.is_open())
     {
-        if(newLine)
-            std::cout << std::setfill(' ') << std::setw(20) << std::left << "[DEBUG]";
-        std::cout << message;
-        newLine = false;
+        shouldLog = true;
     }
 }
-
-void Output::DebugLine(const char *message)
-{
-    if(mode != RELEASE)
-    {
-        if(newLine)
-            std::cout << std::setfill(' ') << std::setw(20) << std::left << "[DEBUG]";
-        std::cout << message << std::endl;
-        newLine = true;
-    }
-}*/

@@ -84,14 +84,14 @@ std::string InstructionR::outputString()
     if(mnemonic() == "nop")
         return "nop";
 
-    return mnemonic()
+    return std::string("mnemonic: ")
+    .append(mnemonic())
     .append(" | opcode: ").append(std::to_string(m_opcode))
     .append(" | rs: ").append(std::to_string(m_rs))
     .append(" | rt: ").append(std::to_string(m_rt))
     .append(" | rd: ").append(std::to_string(m_rd))
     .append(" | shamt: ").append(std::to_string(m_shamt))
-    .append(" | funct: ").append(std::to_string(m_funct))
-    .append(" |");
+    .append(" | funct: ").append(std::to_string(m_funct));
 }
 
 InstructionI::InstructionI(unsigned int opcode)
@@ -145,12 +145,12 @@ unsigned int InstructionI::bits()
 
 std::string InstructionI::outputString()
 {
-    return mnemonic()
+    return std::string("mnemonic: ")
+    .append(mnemonic())
     .append(" | opcode: ").append(std::to_string(m_opcode))
     .append(" | rs: ").append(std::to_string(m_rs))
     .append(" | rt: ").append(std::to_string(m_rt))
-    .append(" | immediate: ").append(std::to_string(m_immediate))
-    .append(" |");
+    .append(" | immediate: ").append(std::to_string(m_immediate));
 }
 
 InstructionJ::InstructionJ(unsigned int opcode)
@@ -181,8 +181,8 @@ unsigned int InstructionJ::bits()
 
 std::string InstructionJ::outputString()
 {
-    return mnemonic()
+    return std::string("mnemonic: ")
+    .append(mnemonic())
     .append(" | opcode: ").append(std::to_string(m_opcode))
-    .append(" | address: ").append(std::to_string(m_address))
-    .append(" |");
+    .append(" | address: ").append(std::to_string(m_address));
 }

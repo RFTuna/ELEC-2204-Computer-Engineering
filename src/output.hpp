@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 enum OutputMode {
     RELEASE,
@@ -13,9 +14,17 @@ private:
 
 static bool newLine;
 
+static std::ofstream log;
+
+static std::string logFile;
+
+static bool shouldLog;
+
 public:
 
 static OutputMode mode;
+
+static void SetLogFile(std::string file);
 
 template <typename T>
 static void Print(T message)
@@ -45,6 +54,11 @@ static void Debug(T message)
         std::cout << message;
         newLine = false;
     }
+
+    if(shouldLog)
+    {
+        log << message;
+    }
 }
 
 template <typename T>
@@ -56,6 +70,11 @@ static void DebugLine(T message)
             std::cout << std::setfill(' ') << std::setw(20) << std::left << "[DEBUG]";
         std::cout << message << std::endl;
         newLine = true;
+    }
+
+    if(shouldLog)
+    {
+        log << message << std::endl;
     }
 }
 };

@@ -29,6 +29,8 @@ unsigned int programCounter;
 Memory memory;
 Registers registers;
 
+unsigned int instructionCount;
+
 unsigned int instructionRegister;
 
 std::string instructionMnemonic;

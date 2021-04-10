@@ -10,6 +10,8 @@ int main(int argc, char* argv[])
 {
     std::string filename = "";
 
+    bool log = false;
+
     for(int i = 0; i < argc; i++)
     {
         if(std::string(argv[i]) == "debug")
@@ -17,10 +19,18 @@ int main(int argc, char* argv[])
 
         if(std::string(argv[i]) == "-f")
             filename = std::string(argv[i + 1]);
+
+        if(std::string(argv[i]) == "log")
+            log = true;
     }
 
- 
-    std::vector<Instruction *> code = Parser::parse(filename);
+        if(log)
+        {
+            std::string logFile(filename);
+            Output::SetLogFile(logFile.append(".log"));
+        }
+
+    std::vector<Instruction *> code = Parser::parse(filename.append(".mips"));
 
     processor.program(code);
 
