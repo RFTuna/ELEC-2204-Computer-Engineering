@@ -51,7 +51,15 @@ void Memory::Debug()
             Output::Debug("m: ");
             Output::Debug(pair.first);
             Output::Debug(" | data: ");
-            Output::DebugLine((unsigned int) pair.second);
+            Output::Debug((unsigned int) pair.second);
+
+            if(pair.first % 4 == 0)
+            {
+                Output::Debug(" | word: ");
+                Output::Debug(getWord(pair.first));
+            }
+
+            Output::DebugLine("");
         }
     }
 }

@@ -1,0 +1,87 @@
+   li $t0, 869
+   li $t1, 2670
+   li $t2, -16148
+   li $t3, -5865
+   lui $t4, 4096
+   li $t5, 87
+   li $t6, -45
+   move $t3, $t0
+   move $t3, $t3
+   move $t2, $t2
+   addu $t2, $t2, $t0
+   addiu $t3, $t2, 24673
+   subu $t0, $t1, $t2
+   addu $t0, $t2, $t0
+   subu $t2, $t1, $t0
+   move $t2, $t3
+   addiu $t2, $t2, 10157
+   move $t3, $t2
+   move $t3, $t2
+   move $t0, $t1
+   addu $t2, $t0, $t1
+   addu $t1, $t0, $t0
+   addiu $t2, $t0, 25029
+   addiu $t2, $t1, 19783
+   subu $t0, $t0, $t0
+   addiu $t1, $t2, 30823
+   subu $t0, $t2, $t1
+   subu $t0, $t2, $t3
+   subu $t1, $t2, $t0
+   addu $t3, $t0, $t1
+   addiu $t3, $t3, 11427
+   addu $t2, $t1, $t3
+   subu $t1, $t2, $t1
+   subu $t3, $t2, $t3
+   addu $t3, $t1, $t0
+   move $t0, $t0
+   addu $t2, $t0, $t3
+   move $t2, $t2
+   addu $t3, $t3, $t1
+   subu $t0, $t1, $t0
+   addu $t0, $t2, $t3
+   move $t3, $t2
+   subu $t3, $t3, $t2
+   subu $t1, $t3, $t3
+   addu $t1, $t2, $t3
+   addiu $t2, $t0, 13279
+   move $t0, $t3
+   subu $t1, $t1, $t1
+   subu $t2, $t3, $t2
+   j jump
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+   move $t1, $t2
+jump:
+   addiu $t6, $t6, 1
+   blt $t5, $t6, jump
+   jal memtest
+   syscall
+memtest:
+   sb $t0 0($t4)
+   sh $t1 4($t4)
+   sw $t2 8($t4)
+   lbu $t1 0($t4)
+   lhu $t2 4($t4)
+   lw $t0 8($t4)
+   jr $ra

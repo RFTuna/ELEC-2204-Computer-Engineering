@@ -24,6 +24,7 @@ void expectNOP(unsigned int ic, unsigned int pc);
 void expectRegistry(std::string name, unsigned int value);
 
 void expectMemory(unsigned int address, unsigned char value);
+void expectMemory(unsigned int address, unsigned char value, unsigned int word);
 
 unsigned int signExtImm(unsigned int immediate);
 unsigned int zeroExtImm(unsigned int immediate);

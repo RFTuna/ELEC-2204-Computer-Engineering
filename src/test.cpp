@@ -132,6 +132,14 @@ void Test::expectMemory(unsigned int address, unsigned char value)
     expected[expected.size() - 1]["data"] = std::to_string((unsigned int)value);
 }
 
+void Test::expectMemory(unsigned int address, unsigned char value, unsigned int word)
+{
+    expected.push_back(std::map<std::string, std::string>());
+    expected[expected.size() - 1]["m"] = std::to_string(address);
+    expected[expected.size() - 1]["data"] = std::to_string((unsigned int)value);
+    expected[expected.size() - 1]["word"] = std::to_string(word);
+}
+
 void Test::Write()
 {
     std::srand(time(NULL));
@@ -700,7 +708,20 @@ void Test::Write()
 
     for ( const auto &pair : memoryValues ) {
         if(pair.first >= (unsigned int)0x10000000)
-            expectMemory(pair.first, pair.second);
+        {
+            if(pair.first % 4 == 0)
+            {
+                unsigned int word = memoryValues[pair.first] + 
+                    (memoryValues[pair.first + 1] << 8) +
+                    (memoryValues[pair.first + 2] << 16) +
+                    (memoryValues[pair.first + 3] << 24);
+                expectMemory(pair.first, pair.second, word);
+            }
+            else
+            {
+                expectMemory(pair.first, pair.second);
+            }
+        }
     }
 }
 

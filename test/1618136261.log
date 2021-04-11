@@ -1,0 +1,472 @@
+n: 0 | pc: 4194304 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 0 | result: 0
+n: 1 | pc: 4194308 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 8 | immediate: 898 | result: 898
+n: 2 | pc: 4194312 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 0 | result: 0
+n: 3 | pc: 4194316 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 9 | immediate: 1101 | result: 1101
+n: 4 | pc: 4194320 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 0 | result: 0
+n: 5 | pc: 4194324 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 10 | immediate: 13557 | result: 13557
+n: 6 | pc: 4194328 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 0 | result: 0
+n: 7 | pc: 4194332 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 11 | immediate: 14097 | result: 14097
+n: 8 | pc: 4194336 | mnemonic: lui | opcode: 15 | rs: 12 | rt: 12 | immediate: 4096 | result: 268435456
+n: 9 | pc: 4194340 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 0 | result: 0
+n: 10 | pc: 4194344 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 13 | immediate: 60 | result: 60
+n: 11 | pc: 4194348 | mnemonic: lui | opcode: 15 | rs: 1 | rt: 1 | immediate: 65535 | result: 4294901760
+n: 12 | pc: 4194352 | mnemonic: ori | opcode: 13 | rs: 1 | rt: 14 | immediate: 65495 | result: 4294967255
+n: 13 | pc: 4194356 | mnemonic: addiu | opcode: 9 | rs: 9 | rt: 10 | immediate: 25054 | result: 26155
+n: 14 | pc: 4194360 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 10 | rd: 8 | shamt: 0 | funct: 33 | result: 27053
+n: 15 | pc: 4194364 | mnemonic: addu | opcode: 0 | rs: 9 | rt: 9 | rd: 9 | shamt: 0 | funct: 33 | result: 2202
+n: 16 | pc: 4194368 | mnemonic: subu | opcode: 0 | rs: 8 | rt: 9 | rd: 10 | shamt: 0 | funct: 35 | result: 24851
+n: 17 | pc: 4194372 | mnemonic: addiu | opcode: 9 | rs: 8 | rt: 11 | immediate: 8834 | result: 35887
+n: 18 | pc: 4194376 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 35887
+n: 19 | pc: 4194380 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 11 | immediate: 4094 | result: 39981
+n: 20 | pc: 4194384 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 39981
+n: 21 | pc: 4194388 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 9 | immediate: 9433 | result: 49414
+n: 22 | pc: 4194392 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 11 | rd: 11 | shamt: 0 | funct: 33 | result: 67034
+n: 23 | pc: 4194396 | mnemonic: subu | opcode: 0 | rs: 8 | rt: 11 | rd: 8 | shamt: 0 | funct: 35 | result: 4294927315
+n: 24 | pc: 4194400 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 67034
+n: 25 | pc: 4194404 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 9 | rd: 10 | shamt: 0 | funct: 35 | result: 0
+n: 26 | pc: 4194408 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 4294927315
+n: 27 | pc: 4194412 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 8 | rd: 9 | shamt: 0 | funct: 35 | result: 89395
+n: 28 | pc: 4194416 | mnemonic: subu | opcode: 0 | rs: 8 | rt: 9 | rd: 10 | shamt: 0 | funct: 35 | result: 4294837920
+n: 29 | pc: 4194420 | mnemonic: addiu | opcode: 9 | rs: 9 | rt: 11 | immediate: 1859 | result: 91254
+n: 30 | pc: 4194424 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 8 | immediate: 21793 | result: 4294859713
+n: 31 | pc: 4194428 | mnemonic: addiu | opcode: 9 | rs: 9 | rt: 8 | immediate: 15549 | result: 104944
+n: 32 | pc: 4194432 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 8 | immediate: 27639 | result: 4294865559
+n: 33 | pc: 4194436 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 4294865559
+n: 34 | pc: 4194440 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 9 | rd: 8 | shamt: 0 | funct: 33 | result: 4294954954
+n: 35 | pc: 4194444 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 9 | rd: 11 | shamt: 0 | funct: 35 | result: 0
+n: 36 | pc: 4194448 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 9 | rd: 8 | shamt: 0 | funct: 33 | result: 4294927315
+n: 37 | pc: 4194452 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 9 | rd: 8 | shamt: 0 | funct: 33 | result: 49414
+n: 38 | pc: 4194456 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 10 | rd: 9 | shamt: 0 | funct: 33 | result: 4294837920
+n: 39 | pc: 4194460 | mnemonic: subu | opcode: 0 | rs: 10 | rt: 9 | rd: 10 | shamt: 0 | funct: 35 | result: 0
+n: 40 | pc: 4194464 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 49414
+n: 41 | pc: 4194468 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 49414
+n: 42 | pc: 4194472 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 9 | rd: 8 | shamt: 0 | funct: 35 | result: 0
+n: 43 | pc: 4194476 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 10 | rd: 8 | shamt: 0 | funct: 33 | result: 0
+n: 44 | pc: 4194480 | mnemonic: subu | opcode: 0 | rs: 10 | rt: 8 | rd: 9 | shamt: 0 | funct: 35 | result: 0
+n: 45 | pc: 4194484 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 10 | rd: 11 | shamt: 0 | funct: 33 | result: 0
+n: 46 | pc: 4194488 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 8 | rd: 8 | shamt: 0 | funct: 35 | result: 0
+n: 47 | pc: 4194492 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 8 | immediate: 9158 | result: 9158
+n: 48 | pc: 4194496 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 8 | immediate: 3834 | result: 3834
+n: 49 | pc: 4194500 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 0
+n: 50 | pc: 4194504 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 51 | pc: 4194508 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 52 | pc: 4194512 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 10 | rd: 11 | shamt: 0 | funct: 35 | result: 0
+n: 53 | pc: 4194516 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 54 | pc: 4194520 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 8 | immediate: 19585 | result: 19585
+n: 55 | pc: 4194524 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 9 | rd: 10 | shamt: 0 | funct: 33 | result: 0
+n: 56 | pc: 4194528 | mnemonic: addiu | opcode: 9 | rs: 8 | rt: 11 | immediate: 15863 | result: 35448
+n: 57 | pc: 4194532 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 9 | immediate: 2085 | result: 2085
+n: 58 | pc: 4194536 | mnemonic: addiu | opcode: 9 | rs: 8 | rt: 11 | immediate: 28623 | result: 48208
+n: 59 | pc: 4194540 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 8 | rd: 10 | shamt: 0 | funct: 33 | result: 67793
+n: 60 | pc: 4194544 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 10 | immediate: 642 | result: 68435
+n: 61 | pc: 4194548 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 9 | immediate: 14706 | result: 62914
+n: 62 | pc: 4194552 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 9 | rd: 8 | shamt: 0 | funct: 33 | result: 131349
+n: 63 | pc: 4194556 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 68435
+n: 64 | pc: 4194560 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 11 | rd: 11 | shamt: 0 | funct: 33 | result: 96416
+n: 65 | pc: 4194564 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 10 | shamt: 0 | funct: 33 | result: 96416
+n: 66 | pc: 4194568 | mnemonic: subu | opcode: 0 | rs: 11 | rt: 11 | rd: 9 | shamt: 0 | funct: 35 | result: 0
+n: 67 | pc: 4194572 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 8 | immediate: 6547 | result: 102963
+n: 68 | pc: 4194576 | mnemonic: addiu | opcode: 9 | rs: 9 | rt: 9 | immediate: 13034 | result: 13034
+n: 69 | pc: 4194580 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 96416
+n: 70 | pc: 4194584 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 9 | immediate: 30747 | result: 127163
+n: 71 | pc: 4194588 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 9 | rd: 10 | shamt: 0 | funct: 33 | result: 223579
+n: 72 | pc: 4194592 | mnemonic: addiu | opcode: 9 | rs: 11 | rt: 11 | immediate: 1410 | result: 97826
+n: 73 | pc: 4194596 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 223579
+n: 74 | pc: 4194600 | mnemonic: addiu | opcode: 9 | rs: 8 | rt: 8 | immediate: 25138 | result: 248717
+n: 75 | pc: 4194604 | mnemonic: subu | opcode: 0 | rs: 11 | rt: 9 | rd: 8 | shamt: 0 | funct: 35 | result: 4294937959
+n: 76 | pc: 4194608 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 9 | rd: 8 | shamt: 0 | funct: 35 | result: 0
+n: 77 | pc: 4194612 | mnemonic: addiu | opcode: 9 | rs: 9 | rt: 11 | immediate: 29078 | result: 156241
+n: 78 | pc: 4194616 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 156241
+n: 79 | pc: 4194620 | mnemonic: subu | opcode: 0 | rs: 8 | rt: 8 | rd: 9 | shamt: 0 | funct: 35 | result: 0
+n: 80 | pc: 4194624 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 81 | pc: 4194628 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 156241
+n: 82 | pc: 4194632 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 10 | immediate: 22789 | result: 246368
+n: 83 | pc: 4194636 | mnemonic: addu | opcode: 0 | rs: 9 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 84 | pc: 4194640 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 9 | shamt: 0 | funct: 33 | result: 0
+n: 85 | pc: 4194644 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 8 | immediate: 14390 | result: 260758
+n: 86 | pc: 4194648 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 8 | rd: 8 | shamt: 0 | funct: 33 | result: 507126
+n: 87 | pc: 4194652 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 8 | rd: 10 | shamt: 0 | funct: 33 | result: 753494
+n: 88 | pc: 4194656 | mnemonic: addiu | opcode: 9 | rs: 10 | rt: 10 | immediate: 8701 | result: 762195
+n: 89 | pc: 4194660 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 11 | rd: 11 | shamt: 0 | funct: 33 | result: 312482
+n: 90 | pc: 4194664 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 507126
+n: 91 | pc: 4194668 | mnemonic: addu | opcode: 0 | rs: 9 | rt: 0 | rd: 10 | shamt: 0 | funct: 33 | result: 0
+n: 92 | pc: 4194672 | mnemonic: addu | opcode: 0 | rs: 9 | rt: 11 | rd: 9 | shamt: 0 | funct: 33 | result: 312482
+n: 93 | pc: 4194676 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 11 | rd: 9 | shamt: 0 | funct: 33 | result: 819608
+n: 94 | pc: 4194680 | mnemonic: subu | opcode: 0 | rs: 10 | rt: 11 | rd: 10 | shamt: 0 | funct: 35 | result: 4294654814
+n: 95 | pc: 4194684 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 9 | rd: 9 | shamt: 0 | funct: 33 | result: 1132090
+n: 96 | pc: 4194688 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 312482
+n: 97 | pc: 4194692 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 8 | rd: 11 | shamt: 0 | funct: 33 | result: 624964
+n: 98 | pc: 4194696 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 9 | rd: 11 | shamt: 0 | funct: 35 | result: 0
+n: 99 | pc: 4194700 | mnemonic: subu | opcode: 0 | rs: 9 | rt: 8 | rd: 8 | shamt: 0 | funct: 35 | result: 819608
+n: 100 | pc: 4194704 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 11 | rd: 11 | shamt: 0 | funct: 33 | result: 0
+n: 101 | pc: 4194708 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 4294654814
+n: 102 | pc: 4194712 | mnemonic: addu | opcode: 0 | rs: 9 | rt: 9 | rd: 10 | shamt: 0 | funct: 33 | result: 2264180
+n: 103 | pc: 4194716 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 0 | rd: 8 | shamt: 0 | funct: 33 | result: 819608
+n: 104 | pc: 4194720 | mnemonic: addu | opcode: 0 | rs: 10 | rt: 11 | rd: 8 | shamt: 0 | funct: 33 | result: 1951698
+n: 105 | pc: 4194724 | mnemonic: subu | opcode: 0 | rs: 10 | rt: 11 | rd: 8 | shamt: 0 | funct: 35 | result: 2576662
+n: 106 | pc: 4194728 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 10 | rd: 8 | shamt: 0 | funct: 33 | result: 4840842
+n: 107 | pc: 4194732 | mnemonic: addu | opcode: 0 | rs: 8 | rt: 8 | rd: 10 | shamt: 0 | funct: 33 | result: 9681684
+n: 108 | pc: 4194736 | mnemonic: addu | opcode: 0 | rs: 11 | rt: 0 | rd: 11 | shamt: 0 | funct: 33 | result: 4294654814
+n: 109 | pc: 4194740 | mnemonic: j | opcode: 2 | address: 1048694
+n: 110 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967256
+n: 111 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 112 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 113 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967257
+n: 114 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 115 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 116 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967258
+n: 117 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 118 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 119 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967259
+n: 120 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 121 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 122 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967260
+n: 123 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 124 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 125 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967261
+n: 126 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 127 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 128 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967262
+n: 129 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 130 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 131 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967263
+n: 132 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 133 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 134 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967264
+n: 135 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 136 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 137 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967265
+n: 138 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 139 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 140 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967266
+n: 141 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 142 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 143 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967267
+n: 144 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 145 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 146 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967268
+n: 147 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 148 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 149 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967269
+n: 150 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 151 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 152 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967270
+n: 153 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 154 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 155 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967271
+n: 156 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 157 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 158 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967272
+n: 159 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 160 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 161 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967273
+n: 162 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 163 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 164 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967274
+n: 165 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 166 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 167 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967275
+n: 168 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 169 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 170 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967276
+n: 171 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 172 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 173 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967277
+n: 174 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 175 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 176 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967278
+n: 177 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 178 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 179 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967279
+n: 180 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 181 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 182 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967280
+n: 183 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 184 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 185 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967281
+n: 186 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 187 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 188 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967282
+n: 189 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 190 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 191 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967283
+n: 192 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 193 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 194 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967284
+n: 195 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 196 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 197 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967285
+n: 198 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 199 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 200 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967286
+n: 201 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 202 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 203 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967287
+n: 204 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 205 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 206 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967288
+n: 207 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 208 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 209 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967289
+n: 210 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 211 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 212 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967290
+n: 213 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 214 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 215 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967291
+n: 216 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 217 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 218 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967292
+n: 219 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 220 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 221 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967293
+n: 222 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 223 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 224 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967294
+n: 225 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 226 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 227 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4294967295
+n: 228 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 229 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 230 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 0
+n: 231 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 232 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 233 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 1
+n: 234 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 235 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 236 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 2
+n: 237 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 238 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 239 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 3
+n: 240 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 241 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 242 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 4
+n: 243 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 244 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 245 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 5
+n: 246 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 247 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 248 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 6
+n: 249 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 250 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 251 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 7
+n: 252 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 253 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 254 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 8
+n: 255 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 256 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 257 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 9
+n: 258 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 259 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 260 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 10
+n: 261 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 262 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 263 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 11
+n: 264 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 265 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 266 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 12
+n: 267 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 268 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 269 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 13
+n: 270 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 271 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 272 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 14
+n: 273 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 274 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 275 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 15
+n: 276 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 277 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 278 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 16
+n: 279 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 280 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 281 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 17
+n: 282 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 283 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 284 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 18
+n: 285 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 286 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 287 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 19
+n: 288 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 289 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 290 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 20
+n: 291 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 292 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 293 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 21
+n: 294 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 295 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 296 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 22
+n: 297 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 298 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 299 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 23
+n: 300 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 301 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 302 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 24
+n: 303 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 304 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 305 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 25
+n: 306 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 307 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 308 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 26
+n: 309 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 310 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 311 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 27
+n: 312 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 313 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 314 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 28
+n: 315 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 316 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 317 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 29
+n: 318 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 319 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 320 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 30
+n: 321 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 322 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 323 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 31
+n: 324 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 325 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 326 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 32
+n: 327 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 328 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 329 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 33
+n: 330 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 331 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 332 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 34
+n: 333 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 334 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 335 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 35
+n: 336 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 337 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 338 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 36
+n: 339 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 340 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 341 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 37
+n: 342 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 343 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 344 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 38
+n: 345 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 346 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 347 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 39
+n: 348 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 349 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 350 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 40
+n: 351 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 352 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 353 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 41
+n: 354 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 355 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 356 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 42
+n: 357 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 358 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 359 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 43
+n: 360 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 361 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 362 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 44
+n: 363 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 364 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 365 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 45
+n: 366 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 367 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 368 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 46
+n: 369 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 370 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 371 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 47
+n: 372 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 373 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 374 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 48
+n: 375 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 376 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 377 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 49
+n: 378 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 379 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 380 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 50
+n: 381 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 382 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 383 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 51
+n: 384 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 385 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 386 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 52
+n: 387 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 388 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 389 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 53
+n: 390 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 391 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 392 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 54
+n: 393 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 394 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 395 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 55
+n: 396 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 397 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 398 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 56
+n: 399 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 400 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 401 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 57
+n: 402 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 403 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 404 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 58
+n: 405 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 406 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 407 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 59
+n: 408 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 409 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 410 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 60
+n: 411 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 0
+n: 412 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 413 | pc: 4194776 | mnemonic: addiu | opcode: 9 | rs: 14 | rt: 14 | immediate: 1 | result: 61
+n: 414 | pc: 4194780 | mnemonic: slt | opcode: 0 | rs: 13 | rt: 14 | rd: 1 | shamt: 0 | funct: 42 | result: 1
+n: 415 | pc: 4194784 | mnemonic: beq | opcode: 4 | rs: 0 | rt: 1 | immediate: 65533
+n: 416 | pc: 4194788 | mnemonic: nop
+n: 417 | pc: 4194792 | mnemonic: jal | opcode: 3 | address: 1048701 | result: 4194800
+n: 418 | pc: 4194804 | mnemonic: sb | opcode: 40 | rs: 12 | rt: 8 | immediate: 0
+n: 419 | pc: 4194808 | mnemonic: sh | opcode: 41 | rs: 12 | rt: 9 | immediate: 4
+n: 420 | pc: 4194812 | mnemonic: sw | opcode: 43 | rs: 12 | rt: 10 | immediate: 8
+n: 421 | pc: 4194816 | mnemonic: lbu | opcode: 36 | rs: 12 | rt: 9 | immediate: 0 | result: 138
+n: 422 | pc: 4194820 | mnemonic: lhu | opcode: 37 | rs: 12 | rt: 10 | immediate: 4 | result: 17978
+n: 423 | pc: 4194824 | mnemonic: lw | opcode: 35 | rs: 12 | rt: 8 | immediate: 8 | result: 9681684
+n: 424 | pc: 4194828 | mnemonic: jr | opcode: 0 | rs: 31 | rt: 31 | rd: 31 | shamt: 0 | funct: 8
+n: 425 | pc: 4194800 | mnemonic: syscall | opcode: 0 | rs: 0 | rt: 0 | rd: 0 | shamt: 0 | funct: 12
+r: 0 | data: 0
+r: 1 | data: 1
+r: 2 | data: 0
+r: 3 | data: 0
+r: 4 | data: 0
+r: 5 | data: 0
+r: 6 | data: 0
+r: 7 | data: 0
+r: 8 | data: 9681684
+r: 9 | data: 138
+r: 10 | data: 17978
+r: 11 | data: 4294654814
+r: 12 | data: 268435456
+r: 13 | data: 60
+r: 14 | data: 61
+r: 15 | data: 0
+r: 16 | data: 0
+r: 17 | data: 0
+r: 18 | data: 0
+r: 19 | data: 0
+r: 20 | data: 0
+r: 21 | data: 0
+r: 22 | data: 0
+r: 23 | data: 0
+r: 24 | data: 0
+r: 25 | data: 0
+r: 26 | data: 0
+r: 27 | data: 0
+r: 28 | data: 0
+r: 29 | data: 0
+r: 30 | data: 0
+r: 31 | data: 4194800
+m: 268435456 | data: 138 | word: 138
+m: 268435457 | data: 0
+m: 268435458 | data: 0
+m: 268435459 | data: 0
+m: 268435460 | data: 58 | word: 17978
+m: 268435461 | data: 70
+m: 268435462 | data: 0
+m: 268435463 | data: 0
+m: 268435464 | data: 20 | word: 9681684
+m: 268435465 | data: 187
+m: 268435466 | data: 147
+m: 268435467 | data: 0
+
+Test successful

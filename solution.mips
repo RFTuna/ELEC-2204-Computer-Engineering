@@ -8,7 +8,7 @@
 loop:
     addu $t0, $t0, $t1
     addiu $t1, $t1, 2
-    sw $t0, 32768($t2)
+    sw $t0, 0($t2)
     addiu $t2, $t2, 4
     bgt $t1, $t3, loop
     syscall
