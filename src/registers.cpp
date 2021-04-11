@@ -55,3 +55,23 @@ unsigned int Registers::Number(std::string name)
 {
     return names[name];
 }
+
+void Registers::Debug()
+{
+    for (unsigned int i = 0; i < 32; i++) {
+        Output::Debug("r: ");
+        Output::Debug(i);
+        Output::Debug(" | data: ");
+        Output::DebugLine(data[i]);
+    }
+}
+
+std::string Registers::Name(unsigned int number)
+{
+    for ( const auto &pair : names ) {
+        if(pair.second == number)
+            return pair.first;
+    }
+
+    return "";
+}

@@ -8,7 +8,7 @@
 
 Processor::Processor() {
     currentState = State::FETCH;
-    programCounter = 0x04000000;
+    programCounter = 0x00400000;
 }
 
 ReturnCode Processor::cycle() {
@@ -38,6 +38,12 @@ ReturnCode Processor::cycle() {
 
     currentState = (State)((currentState + 1) % STATE_COUNT);
 
+    if(exit == EXIT)
+    {
+        registers.Debug();
+        memory.Debug();
+    }
+
     return exit ? EXIT : CONTINUE;
 }
 
@@ -62,6 +68,9 @@ void Processor::Decode()
 
     instructionMnemonic = instruction->mnemonic();
 
+    if(instructionMnemonic == "nop")
+        Output::Debug("mnemonic: ");
+
     Output::Debug(instruction->outputString());
 
     if(instruction->format() == R)
@@ -72,7 +81,6 @@ void Processor::Decode()
         shamt = ((InstructionR *)instruction)->get_shamt();
 
         target = ((InstructionR *)instruction)->get_rd();
-
     }
     else if(instruction->format() == I)
     {
@@ -107,11 +115,11 @@ void Processor::Execute()
     else if(instructionMnemonic == "nor")
         result = ~(rsValue | rtValue);
     else if (instructionMnemonic == "sll")
-        result = rsValue << shamt;
+        result = rtValue << shamt;
     else if (instructionMnemonic == "srl")
-        result = rsValue >> shamt;
+        result = rtValue >> shamt;
     else if (instructionMnemonic == "sra")
-        result = ((int)rsValue) >> shamt; //implementation defined, but gcc is arithmetic shift
+        result = ((int)rtValue) >> shamt; //implementation defined, but gcc is arithmetic shift
     else if (instructionMnemonic == "sltu")
         result = rsValue < rtValue ? 1 : 0;
     else if (instructionMnemonic == "sltiu")
@@ -130,8 +138,8 @@ void Processor::Execute()
         programCounter = jumpAddr();
     else if(instructionMnemonic == "jal")
     {
-        programCounter = jumpAddr();
         result = programCounter + 4;
+        programCounter = jumpAddr();
     }
     else if(instructionMnemonic == "lui")
         result = immediate << 16;
@@ -162,7 +170,8 @@ void Processor::Write_Back()
     && instructionMnemonic != "jr"
     && instructionMnemonic != "beq"
     && instructionMnemonic != "bne"
-    && instructionMnemonic != "syscall")
+    && instructionMnemonic != "syscall"
+    && instructionMnemonic != "nop")
     {
         Output::Debug(" | result: ");
         Output::Debug(result);
@@ -207,7 +216,7 @@ void Processor::program(std::vector<Instruction *> instructions)
 {
     for(unsigned int i = 0; i < instructions.size(); i++)
     {
-        memory.setWord(0x04000000 + i * 4, instructions[i]->bits());
+        memory.setWord(0x00400000 + i * 4, instructions[i]->bits());
     }
 }
 

@@ -4,7 +4,7 @@
 
 unsigned char Memory::getByte(unsigned int address)
 {
-    if(address >= 0x04000000 && address < 0x80000000)
+    if(address >= 0x00400000 && address < 0x80000000)
     {
         if(!data.count(address))
             data[address] = 0;
@@ -15,7 +15,7 @@ unsigned char Memory::getByte(unsigned int address)
 
 void Memory::setByte(unsigned int address, unsigned char value)
 {
-    if(address >= 0x04000000 && address < 0x80000000)
+    if(address >= 0x00400000 && address < 0x80000000)
     {
         data[address] = value;
     }
@@ -41,4 +41,17 @@ void Memory::setWord(unsigned int address, unsigned int value)
 {
     setHalfword(address, value & 0x0000FFFF);
     setHalfword(address + 2, (value & 0xFFFF0000) >> 16);
+}
+
+void Memory::Debug()
+{   
+    for ( const auto &pair : data ) {
+        if(pair.first >= (unsigned int)0x10000000)
+        {
+            Output::Debug("m: ");
+            Output::Debug(pair.first);
+            Output::Debug(" | data: ");
+            Output::DebugLine((unsigned int) pair.second);
+        }
+    }
 }

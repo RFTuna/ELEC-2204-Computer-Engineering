@@ -3,6 +3,7 @@
 #include "instructions.hpp"
 
 #include <string>
+#include "output.hpp"
 
 unsigned int Instruction::get_opcode()
 {
@@ -22,6 +23,16 @@ InstructionR::InstructionR(unsigned int opcode, unsigned int funct)
     m_rt = 0;
     m_rd = 0;
     m_shamt = 0;
+}
+
+InstructionR::InstructionR(unsigned int opcode, unsigned int funct, unsigned int shamt)
+{
+    m_opcode = opcode;
+    m_funct = funct;
+    m_rs = 0;
+    m_rt = 0;
+    m_rd = 0;
+    m_shamt = 1;
 }
 
 void InstructionR::set_rs(unsigned int rs)

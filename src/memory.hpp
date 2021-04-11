@@ -20,4 +20,6 @@ void setHalfword(unsigned int address, unsigned int value);
 unsigned int getWord(unsigned int address);
 void setWord(unsigned int address, unsigned int value);
 
+void Debug();
+
 };

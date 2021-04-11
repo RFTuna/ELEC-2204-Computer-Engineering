@@ -37,6 +37,7 @@ private:
 public:
 
     InstructionR(unsigned int opcode, unsigned int funct);
+    InstructionR(unsigned int opcode, unsigned int funct, unsigned int shamt);
 
     void set_rs(unsigned int rs);
     void set_rt(unsigned int rt);

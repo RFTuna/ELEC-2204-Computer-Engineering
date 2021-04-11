@@ -29,7 +29,7 @@ std::map<std::string, InstructionPrototype> Instructions::instructions
     {"ori", {I, {0xd}}}, //
 
     {"slt", {R, {0, 0x2a}}}, //
-    {"stli", {I, {0xa}}}, //
+    {"slti", {I, {0xa}}}, //
     {"sltiu", {I, {0xb}}}, //
     {"sltu", {R, {0, 0x2b}}}, //
 
@@ -106,6 +106,10 @@ Instruction *Instructions::decode(unsigned int bits)
 Instruction *Instructions::create(std::string mnemonic)
 {
     InstructionPrototype prototype = instructions[mnemonic];
+
+    //need to set shamt so that sll is distinguishable from nop, is then changed later. note that sll of 0 will end up as not
+    if(mnemonic == "sll")
+        return (Instruction *)(new InstructionR(prototype.arguments[0], prototype.arguments[1], 1));
 
     switch(prototype.format)
     {

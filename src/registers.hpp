@@ -14,5 +14,7 @@ unsigned int get(unsigned int number);
 void set(unsigned int number, unsigned int value);
 
 static unsigned int Number(std::string name);
+static std::string Name(unsigned int number);
 
+void Debug();
 };

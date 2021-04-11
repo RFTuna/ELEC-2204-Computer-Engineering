@@ -22,10 +22,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 run: all
-	bin\main
+	bin\main log -f solution
 
 debug: all
-	bin\main log -f solution
+	bin\main test
 
 clean:
 	@-del /Q $(BIN_DIR) $(OBJ_DIR)
